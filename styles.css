@@ -43,17 +43,22 @@ h3 { font-size: clamp(22px, 2.4vw, 34px); font-weight: 400; }
   overflow-wrap: anywhere;
 }
 
-.response-body { display: flex; align-items: center; justify-content: center; }
-.response { display: flex; flex-direction: column; align-items: center; gap: 28px; min-height: 0; width: min(1100px, 100%); max-height: 100%; }
-.response .screenshot { display: flex; justify-content: center; min-height: 0; width: 100%; }
-.response img { width: 100%; min-height: 0; }
-.response-messages { display: flex; flex-direction: column; gap: 24px; min-height: 0; width: 100%; }
-.response-messages .screenshot { flex: 1 1 auto; min-height: 0; }
-.response-messages img { width: 100%; min-height: 0; }
-.response.is-entering { animation: reveal 240ms ease-out; }
-@keyframes reveal { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.emotion-caption { font-size: clamp(32px, 4.4vw, 64px); font-weight: 600; line-height: 1.15; text-align: center; text-wrap: balance; }
+.response-body { display: flex; align-items: center; justify-content: center; container-type: size; }
+.response-media { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 24px; width: min(1100px, 100%); }
+.response-media .screenshot { width: 100%; }
+.response-media img { width: 100%; height: auto; }
+/* Fit the complete image group inside the available body, centered as one unit. */
+@supports (width: 1cqh) {
+  .response-media { width: min(1100px, 100%, calc((100cqh - 120px) * 7.5)); }
+  .response-media--glee { width: min(1100px, 100%, calc((100cqh - 140px) * 2.72)); }
+}
 
-.sentiment-note { margin: 24px 0 0; font-size: clamp(20px, 2.1vw, 30px); text-align: center; text-wrap: balance; }
+.sentiment-note { margin: 0; font-size: clamp(20px, 2.1vw, 30px); text-align: center; text-wrap: balance; }
+.findings-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 48px; }
+.hero-stat { margin: 0; text-align: center; }
+.hero-stat strong { display: block; font-size: clamp(56px, 7vw, 96px); font-weight: 600; line-height: 1.05; }
+.hero-stat span { display: block; max-width: 25ch; margin: 20px auto 0; font-size: clamp(22px, 2.5vw, 36px); line-height: 1.3; text-wrap: balance; }
 .chart-body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
 .pie {
   width: min(48vh, 60vw, 450px);
@@ -75,9 +80,12 @@ h3 { font-size: clamp(22px, 2.4vw, 34px); font-weight: 400; }
 button:focus-visible { outline: 2px solid #f2f2f2; outline-offset: 2px; }
 #position { white-space: nowrap; font-variant-numeric: tabular-nums; }
 
-@media (max-width: 600px) {
-  .response { gap: 16px; }
-  .response h3 { font-size: 24px; }
+@media (max-width: 700px) {
+  .findings-body { grid-template-columns: 1fr; align-content: center; gap: 28px; }
+  .hero-stat strong { font-size: 56px; }
+  .hero-stat span { margin-top: 12px; font-size: 22px; }
+  .pie { width: min(28vh, 52vw, 280px); }
+  .chart-body { gap: 16px; }
   .missing-image { padding: 32px 8px; }
 }
 @media (max-height: 500px) {
@@ -85,7 +93,4 @@ button:focus-visible { outline: 2px solid #f2f2f2; outline-offset: 2px; }
   .slide-body { margin-top: 16px; }
   .pie { width: min(40vh, 40vw); }
   .chart-body { gap: 16px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .response.is-entering { animation: none; }
 }

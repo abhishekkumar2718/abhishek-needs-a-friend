@@ -5,46 +5,27 @@ const previousButton = document.querySelector("#previous");
 const nextButton = document.querySelector("#next");
 const position = document.querySelector("#position");
 let slideIndex = 0;
-let revealStep = 0;
-
-function lastReveal(index = slideIndex) {
-  return Math.max(0, ...[...slides[index].querySelectorAll("[data-reveal]")].map((response) => Number(response.dataset.reveal)));
-}
-
-function render(animate = false) {
+function render() {
   slides.forEach((slide, index) => {
     slide.hidden = index !== slideIndex;
-  });
-  document.querySelectorAll("[data-reveal]").forEach((response) => {
-    const step = Number(response.dataset.reveal);
-    const visible = slides[slideIndex].contains(response) && step <= revealStep;
-    response.hidden = !visible;
-    response.classList.toggle("is-entering", animate && visible && step === revealStep);
   });
   previousButton.disabled = slideIndex === 0;
   nextButton.disabled = slideIndex === slides.length - 1;
   position.textContent = `${slideIndex + 1} / ${slides.length}`;
-  const hash = `#${slideIndex + 1}${lastReveal() > 0 ? `/${revealStep}` : ""}`;
+  const hash = `#${slideIndex + 1}`;
   history.replaceState(null, "", hash);
 }
 
 function next() {
-  if (revealStep < lastReveal()) {
-    revealStep += 1;
-    render(true);
-  } else if (slideIndex < slides.length - 1) {
+  if (slideIndex < slides.length - 1) {
     slideIndex += 1;
-    revealStep = 0;
     render();
   }
 }
 
 function previous() {
-  if (revealStep > 0) {
-    revealStep -= 1;
-  } else if (slideIndex > 0) {
+  if (slideIndex > 0) {
     slideIndex -= 1;
-    revealStep = lastReveal();
   }
   render();
 }
@@ -53,7 +34,6 @@ function readHash() {
   const match = location.hash.match(/^#(\d+)(?:\/(\d+))?$/);
   const requestedSlide = match ? Number(match[1]) - 1 : 0;
   slideIndex = requestedSlide >= 0 && requestedSlide < slides.length ? requestedSlide : 0;
-  revealStep = match ? Math.min(Number(match[2] || 0), lastReveal()) : 0;
   render();
 }
 
@@ -73,12 +53,10 @@ window.addEventListener("keydown", (event) => {
   } else if (event.key === "Home") {
     event.preventDefault();
     slideIndex = 0;
-    revealStep = 0;
     render();
   } else if (event.key === "End") {
     event.preventDefault();
     slideIndex = slides.length - 1;
-    revealStep = 0;
     render();
   }
 });

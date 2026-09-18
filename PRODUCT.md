@@ -20,7 +20,7 @@ A five-slide joke presentation of friendship survey responses.
 
 ## Capabilities and Constraints
 
-Use a dark theme and minimal unobstructive styling. Preserve the supplied titles unless explicitly changed; copy suggestions are not automatic edits. Embarrassment and glee have separate slides with large centered screenshots for projector readability. Each reveals its emotion and screenshot group after its title; both glee messages appear together. The final title is "Key findings", with "I analyzed the sentiment of the form responses." above a pie chart with 85% negative and 15% positive results, intentionally fictional for the joke. Its legend contains only positive/negative labels, no numbers. User supplied all four screenshots. Keep keyboard navigation.
+Use a dark theme and minimal unobstructive styling. Titles: "Friendship Audit", "Spectrum of Emotions" on both response slides with standard slide-title styling, and "Key findings". Emotion captions preserve the user's supplied copy: "Second-hand Embarrasment" and "Glee". Separate response slides show large vertically centered screenshot groups immediately, without reveal dynamics. Both glee messages appear together; the interest/roast screenshot comes first. Key findings has two columns: "Sentiment of form responses", the illustrative 85% negative / 15% positive pie, and a numbers-free category legend on the left; "1 in 5 respondents would recommend Abhishek as a friend." as a hero stat on the right. User supplied all four screenshots and the recommendation stat. Keep keyboard navigation. Iterate locally first; publish only on explicit user request.
 
 ## Brand Commitments
 

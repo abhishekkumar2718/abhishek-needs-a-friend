@@ -66,7 +66,7 @@ Its visual language is deliberately flat and unobstructive. Screenshots remain c
 - Dark, text-led slides.
 - Uncropped evidence screenshots.
 - Flat shapes and restrained semantic color.
-- Presenter-controlled reveals.
+- Immediate slide content and presenter-controlled navigation.
 
 ## Colors
 
@@ -92,7 +92,7 @@ All text uses the system sans-serif stack in the frontmatter. There are no downl
 
 - **Display:** centered title slide, capped at an 18-character measure.
 - **Title:** top-centered headings on subsequent slides.
-- **Response label:** regular-weight emotion labels, centered above each screenshot group. At widths of 600px or less, size is 24px.
+- **Response label:** prominent 600-weight emotion captions in clamp(32px, 4.4vw, 64px) type. Both "Spectrum of Emotions" titles use the standard slide-title size, weight, and color.
 - **Body:** chart legend, with text labels rather than color alone.
 - **Label:** small presenter controls and missing-image filename. Slide position uses tabular numerals.
 
@@ -102,9 +102,9 @@ Each slide occupies the viewport (100vh with 100dvh override), using a vertical 
 
 The body grows into the remaining space with a fluid top gap (clamp(24px, 4vh, 48px)). Form evidence is centered with a maximum image width of 760px. Images use contain sizing and are not cropped.
 
-Embarrassment and glee occupy separate slides. Each uses a centered emotion label and screenshot group up to 1100px wide, replacing the old half-width spectrum layout for projector readability. Glee holds two screenshots stacked vertically with a 24px gap. Response spacing reduces from 28px to 16px at widths of 600px or less.
+Embarrassment and glee occupy separate slides. Prominent emotion captions sit directly below their screenshot groups, rather than under the slide title. The groups are vertically centered within the remaining body, up to 1100px wide, and shrink proportionally to the body's available height using size-container units with room reserved for the caption. Glee holds two screenshots stacked vertically with a 24px gap, with the interest/roast message first.
 
-The "Key findings" title is followed by a centered sentiment-analysis point in clamp(20px, 2.1vw, 30px) type. The chart is centered above a wrapping horizontal legend with category names only. Its diameter is min(48vh, 60vw, 450px). At viewport heights of 500px or less, top padding and body spacing shrink, and the chart uses min(40vh, 40vw).
+"Key findings" has two equal columns with a 48px gap. The left holds "Sentiment of form responses", the pie, and a category-only legend. The right holds the large "1 in 5" stat (up to 96px) and its recommendation sentence. Columns stack at 700px or less. The pie diameter is min(48vh, 60vw, 450px), smaller on narrow and short viewports.
 
 ## Elevation & Depth
 
@@ -124,9 +124,9 @@ Previous and Next flank a small slide count, fixed at the bottom center (12px fr
 
 Figures have no margins or decoration. Images are block-level, constrained to their available width and height, and use object-fit: contain. All four user-supplied screenshots are present. If an image cannot load, its filename appears in a dashed fallback slot.
 
-### Spectrum reveal
+### Response visibility
 
-Each response slide's title appears first; its emotion and screenshots appear on the next presenter action. Both glee screenshots reveal together. Newly revealed content fades in with a small upward settling motion (240ms ease-out, 8px travel). Reduced-motion preference disables that animation. Previous reverses the reveal before changing slides.
+Each response slide shows its title, emotion, and complete screenshot group immediately. There are no staged reveals or entrance animations. Navigation advances or reverses whole slides; legacy reveal URL fragments still resolve to their slide.
 
 ### Pie and legend
 
@@ -139,7 +139,7 @@ The circular chart uses an 85% negative segment and a 15% positive segment. The 
 - Do preserve the supplied copy exactly.
 - Do keep screenshot bodies uncropped with contain sizing.
 - Do retain quiet bottom controls and a visible keyboard-focus outline.
-- Do preserve the separate response slides, large centered images, and presenter-controlled reveal order.
+- Do preserve the separate response slides, large centered images, and immediate screenshot visibility.
 
 ### Don't:
 

@@ -15,7 +15,7 @@
       </section>
 
       <section class="slide" aria-labelledby="form-title" hidden>
-        <h2 id="form-title">The Form</h2>
+        <h2 id="form-title">Friendship Audit</h2>
         <div class="slide-body form-body">
           <figure class="screenshot">
             <img src="assets/form.png" alt="WhatsApp message sharing the form">
@@ -25,53 +25,54 @@
       </section>
 
       <section class="slide response-slide" aria-labelledby="embarrassment-title" hidden>
-        <h2 id="embarrassment-title">Spectrum of responses</h2>
+        <h2 id="embarrassment-title">Spectrum of Emotions</h2>
         <div class="slide-body response-body">
-          <div class="response" data-reveal="1" hidden>
-            <h3>embarrassment</h3>
+          <figure class="response-media">
             <figure class="screenshot">
               <img src="assets/embarassment.png" alt="WhatsApp response expressing embarrassment">
               <figcaption class="missing-image" hidden>assets/embarassment.png</figcaption>
             </figure>
-          </div>
+            <figcaption class="emotion-caption">Second-hand Embarrasment</figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="slide response-slide" aria-labelledby="glee-title" hidden>
-        <h2 id="glee-title">Spectrum of responses</h2>
+        <h2 id="glee-title">Spectrum of Emotions</h2>
         <div class="slide-body response-body">
-          <div class="response" data-reveal="1" hidden>
-            <h3>glee</h3>
-            <div class="response-messages">
-              <figure class="screenshot">
-                <img src="assets/glee.png" alt="WhatsApp response: I laughed while writing this">
-                <figcaption class="missing-image" hidden>assets/glee.png</figcaption>
-              </figure>
-              <figure class="screenshot">
-                <img src="assets/glee-2.png" alt="WhatsApp response expressing interest and offering to roast Abhishek">
-                <figcaption class="missing-image" hidden>assets/glee-2.png</figcaption>
-              </figure>
-            </div>
-          </div>
+          <figure class="response-media response-media--glee">
+            <figure class="screenshot">
+              <img src="assets/glee-2.png" alt="WhatsApp response expressing interest and offering to roast Abhishek">
+              <figcaption class="missing-image" hidden>assets/glee-2.png</figcaption>
+            </figure>
+            <figure class="screenshot">
+              <img src="assets/glee.png" alt="WhatsApp response: I laughed while writing this">
+              <figcaption class="missing-image" hidden>assets/glee.png</figcaption>
+            </figure>
+            <figcaption class="emotion-caption">Glee</figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="slide" aria-labelledby="findings-title" hidden>
         <h2 id="findings-title">Key findings</h2>
-        <p class="sentiment-note">I analyzed the sentiment of the form responses.</p>
-        <div class="slide-body chart-body">
-          <div class="pie" role="img" aria-label="Pie chart: overwhelmingly negative sentiment, with a small positive segment"></div>
-          <div class="legend">
-            <p><span class="swatch negative" aria-hidden="true"></span>negative</p>
-            <p><span class="swatch positive" aria-hidden="true"></span>positive</p>
+        <div class="slide-body findings-body">
+          <div class="chart-body">
+            <p class="sentiment-note">Sentiment of form responses</p>
+            <div class="pie" role="img" aria-label="Pie chart: overwhelmingly negative sentiment, with a small positive segment"></div>
+            <div class="legend">
+              <p><span class="swatch negative" aria-hidden="true"></span>negative</p>
+              <p><span class="swatch positive" aria-hidden="true"></span>positive</p>
+            </div>
           </div>
+          <p class="hero-stat"><strong>1 in 5</strong><span>respondents would recommend Abhishek as a friend.</span></p>
         </div>
       </section>
     </main>
     <nav class="controls" aria-label="Slide controls">
-      <button id="previous" type="button" aria-label="Previous reveal or slide" title="Previous (Left Arrow)">Previous</button>
+      <button id="previous" type="button" aria-label="Previous slide" title="Previous (Left Arrow)">Previous</button>
       <span id="position" aria-live="polite" aria-atomic="true">1 / 5</span>
-      <button id="next" type="button" aria-label="Next reveal or slide" title="Next (Right Arrow or Space)">Next</button>
+      <button id="next" type="button" aria-label="Next slide" title="Next (Right Arrow or Space)">Next</button>
     </nav>
   </body>
 </html>

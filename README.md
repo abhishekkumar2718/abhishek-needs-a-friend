@@ -17,7 +17,7 @@ Open `index.html` or the GitHub Pages URL. Use browser fullscreen for the speech
 
 The deck contains five slides: title, Friendship Audit, Second-hand Embarrasment response, Glee responses, and key findings. All content appears immediately; there are no reveal steps. Response screenshots are vertically centered in their available body. Both glee screenshots appear together, with the interest/roast message first. URL fragments retain the current slide on refresh; old reveal fragments remain compatible.
 
-Key findings uses two columns: sentiment text, pie, and category-only legend on the left; the user-supplied "1 in 5 respondents would recommend Abhishek as a friend" stat on the right.
+Key findings uses two columns: sentiment text, pie, and category-only legend on the left; the user-supplied "1 in 5 respondents recommend Abhishek as a friend" stat on the right.
 
 The 85% / 15% chart is fictional data for the joke, not an analysis of actual survey responses.
 

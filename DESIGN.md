@@ -81,7 +81,7 @@ A neutral dark field carries the content; muted red and green communicate the ch
 
 - **Near-Black Stage:** every slide's background.
 - **Soft Light Text:** slide headings, content, selection background, and keyboard-focus outline.
-- **Muted Gray:** navigation, spectrum line, and missing-image filename.
+- **Muted Gray:** navigation and missing-image filename.
 - **Bright Control Hover:** hovered navigation text only.
 
 **The Content-First Rule.** Color supports readable content and chart meaning; it does not decorate slide surfaces.
@@ -92,7 +92,7 @@ All text uses the system sans-serif stack in the frontmatter. There are no downl
 
 - **Display:** centered title slide, capped at an 18-character measure.
 - **Title:** top-centered headings on subsequent slides.
-- **Response label:** regular-weight endpoint labels. At widths of 600px or less, size changes to clamp(18px, 4.5vw, 24px).
+- **Response label:** regular-weight emotion labels, centered above each screenshot group. At widths of 600px or less, size is 24px.
 - **Body:** chart legend, with text labels rather than color alone.
 - **Label:** small presenter controls and missing-image filename. Slide position uses tabular numerals.
 
@@ -102,9 +102,9 @@ Each slide occupies the viewport (100vh with 100dvh override), using a vertical 
 
 The body grows into the remaining space with a fluid top gap (clamp(24px, 4vh, 48px)). Form evidence is centered with a maximum image width of 760px. Images use contain sizing and are not cropped.
 
-The implemented spectrum uses two equal horizontal columns separated by clamp(24px, 8vw, 120px); a thin gray line spans both above the endpoints. The left holds one screenshot; the right holds two screenshots stacked vertically. This stays two-column on narrow screens, with the gap reduced to 20px at 600px or less. Response spacing reduces from 24px to 16px there.
+Embarrassment and glee occupy separate slides. Each uses a centered emotion label and screenshot group up to 1100px wide, replacing the old half-width spectrum layout for projector readability. Glee holds two screenshots stacked vertically with a 24px gap. Response spacing reduces from 28px to 16px at widths of 600px or less.
 
-The chart is centered above a wrapping horizontal legend. Its diameter is min(48vh, 60vw, 450px). At viewport heights of 500px or less, top padding and body spacing shrink, and the chart uses min(40vh, 40vw).
+The "Key findings" title is followed by a centered sentiment-analysis point in clamp(20px, 2.1vw, 30px) type. The chart is centered above a wrapping horizontal legend with category names only. Its diameter is min(48vh, 60vw, 450px). At viewport heights of 500px or less, top padding and body spacing shrink, and the chart uses min(40vh, 40vw).
 
 ## Elevation & Depth
 
@@ -126,11 +126,11 @@ Figures have no margins or decoration. Images are block-level, constrained to th
 
 ### Spectrum reveal
 
-The title and line appear first; the left response appears on the next presenter action; both right screenshots appear together on the following action. Newly revealed content fades in with a small upward settling motion (240ms ease-out, 8px travel). Reduced-motion preference disables that animation. Previous reverses the reveal before changing slides.
+Each response slide's title appears first; its emotion and screenshots appear on the next presenter action. Both glee screenshots reveal together. Newly revealed content fades in with a small upward settling motion (240ms ease-out, 8px travel). Reduced-motion preference disables that animation. Previous reverses the reveal before changing slides.
 
 ### Pie and legend
 
-The circular chart uses an 85% negative segment and a 15% positive segment. The legend repeats those percentages with square color swatches and text. Its fictional values are presentation content, not reusable visual-system defaults.
+The circular chart uses an 85% negative segment and a 15% positive segment. The legend uses square color swatches and the labels "negative" and "positive", without numbers. Its fictional values are presentation content, not reusable visual-system defaults.
 
 ## Do's and Don'ts
 
@@ -139,7 +139,7 @@ The circular chart uses an 85% negative segment and a 15% positive segment. The 
 - Do preserve the supplied copy exactly.
 - Do keep screenshot bodies uncropped with contain sizing.
 - Do retain quiet bottom controls and a visible keyboard-focus outline.
-- Do preserve the two-column spectrum and presenter-controlled reveal order.
+- Do preserve the separate response slides, large centered images, and presenter-controlled reveal order.
 
 ### Don't:
 

@@ -7,26 +7,29 @@ const position = document.querySelector("#position");
 let slideIndex = 0;
 let revealStep = 0;
 
+function lastReveal(index = slideIndex) {
+  return Math.max(0, ...[...slides[index].querySelectorAll("[data-reveal]")].map((response) => Number(response.dataset.reveal)));
+}
+
 function render(animate = false) {
   slides.forEach((slide, index) => {
     slide.hidden = index !== slideIndex;
   });
   document.querySelectorAll("[data-reveal]").forEach((response) => {
     const step = Number(response.dataset.reveal);
-    const visible = slideIndex === 2 && step <= revealStep;
+    const visible = slides[slideIndex].contains(response) && step <= revealStep;
     response.hidden = !visible;
     response.classList.toggle("is-entering", animate && visible && step === revealStep);
   });
-  slides[2].dataset.step = String(revealStep);
   previousButton.disabled = slideIndex === 0;
   nextButton.disabled = slideIndex === slides.length - 1;
   position.textContent = `${slideIndex + 1} / ${slides.length}`;
-  const hash = `#${slideIndex + 1}${slideIndex === 2 ? `/${revealStep}` : ""}`;
+  const hash = `#${slideIndex + 1}${lastReveal() > 0 ? `/${revealStep}` : ""}`;
   history.replaceState(null, "", hash);
 }
 
 function next() {
-  if (slideIndex === 2 && revealStep < 2) {
+  if (revealStep < lastReveal()) {
     revealStep += 1;
     render(true);
   } else if (slideIndex < slides.length - 1) {
@@ -37,19 +40,20 @@ function next() {
 }
 
 function previous() {
-  if (slideIndex === 2 && revealStep > 0) {
+  if (revealStep > 0) {
     revealStep -= 1;
   } else if (slideIndex > 0) {
     slideIndex -= 1;
-    revealStep = slideIndex === 2 ? 2 : 0;
+    revealStep = lastReveal();
   }
   render();
 }
 
 function readHash() {
-  const match = location.hash.match(/^#([1-4])(?:\/([0-2]))?$/);
-  slideIndex = match ? Number(match[1]) - 1 : 0;
-  revealStep = slideIndex === 2 && match ? Number(match[2] || 0) : 0;
+  const match = location.hash.match(/^#(\d+)(?:\/(\d+))?$/);
+  const requestedSlide = match ? Number(match[1]) - 1 : 0;
+  slideIndex = requestedSlide >= 0 && requestedSlide < slides.length ? requestedSlide : 0;
+  revealStep = match ? Math.min(Number(match[2] || 0), lastReveal()) : 0;
   render();
 }
 

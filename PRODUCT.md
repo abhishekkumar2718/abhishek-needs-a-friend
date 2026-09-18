@@ -16,11 +16,11 @@ Abhishek presents the deck during a humorous speech; the audience watches the sl
 
 ## Product Purpose
 
-A four-slide joke presentation of friendship survey responses.
+A five-slide joke presentation of friendship survey responses.
 
 ## Capabilities and Constraints
 
-Preserve the supplied copy as-is. Use a dark theme and minimal unobstructive styling. The spectrum slide reveals title, left response, and right responses in presenter-controlled stages. User supplied the form-sharing screenshot, one embarrassment and two glee screenshots; both glee messages reveal together on the right. The approved plan includes keyboard navigation and a pie chart with 85% negative and 15% positive results, intentionally fictional for the joke.
+Use a dark theme and minimal unobstructive styling. Preserve the supplied titles unless explicitly changed; copy suggestions are not automatic edits. Embarrassment and glee have separate slides with large centered screenshots for projector readability. Each reveals its emotion and screenshot group after its title; both glee messages appear together. The final title is "Key findings", with "I analyzed the sentiment of the form responses." above a pie chart with 85% negative and 15% positive results, intentionally fictional for the joke. Its legend contains only positive/negative labels, no numbers. User supplied all four screenshots. Keep keyboard navigation.
 
 ## Brand Commitments
 

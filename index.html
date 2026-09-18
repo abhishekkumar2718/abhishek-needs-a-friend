@@ -24,18 +24,23 @@
         </div>
       </section>
 
-      <section class="slide spectrum-slide" aria-labelledby="spectrum-title" data-step="0" hidden>
-        <h2 id="spectrum-title">Spectrum of responses</h2>
-        <div class="slide-body spectrum-body">
-          <div class="spectrum-line" aria-hidden="true"></div>
-          <div class="response response-left" data-reveal="1" hidden>
-            <h3>embarassment</h3>
+      <section class="slide response-slide" aria-labelledby="embarrassment-title" hidden>
+        <h2 id="embarrassment-title">Spectrum of responses</h2>
+        <div class="slide-body response-body">
+          <div class="response" data-reveal="1" hidden>
+            <h3>embarrassment</h3>
             <figure class="screenshot">
-              <img src="assets/embarassment.png" alt="WhatsApp response expressing embarassment">
+              <img src="assets/embarassment.png" alt="WhatsApp response expressing embarrassment">
               <figcaption class="missing-image" hidden>assets/embarassment.png</figcaption>
             </figure>
           </div>
-          <div class="response response-right" data-reveal="2" hidden>
+        </div>
+      </section>
+
+      <section class="slide response-slide" aria-labelledby="glee-title" hidden>
+        <h2 id="glee-title">Spectrum of responses</h2>
+        <div class="slide-body response-body">
+          <div class="response" data-reveal="1" hidden>
             <h3>glee</h3>
             <div class="response-messages">
               <figure class="screenshot">
@@ -52,19 +57,20 @@
       </section>
 
       <section class="slide" aria-labelledby="findings-title" hidden>
-        <h2 id="findings-title">Friendship Performance Review - Key Findings</h2>
+        <h2 id="findings-title">Key findings</h2>
+        <p class="sentiment-note">I analyzed the sentiment of the form responses.</p>
         <div class="slide-body chart-body">
-          <div class="pie" role="img" aria-label="Pie chart: 85% negative, 15% positive"></div>
+          <div class="pie" role="img" aria-label="Pie chart: overwhelmingly negative sentiment, with a small positive segment"></div>
           <div class="legend">
-            <p><span class="swatch negative" aria-hidden="true"></span>85% negative</p>
-            <p><span class="swatch positive" aria-hidden="true"></span>15% positive</p>
+            <p><span class="swatch negative" aria-hidden="true"></span>negative</p>
+            <p><span class="swatch positive" aria-hidden="true"></span>positive</p>
           </div>
         </div>
       </section>
     </main>
     <nav class="controls" aria-label="Slide controls">
       <button id="previous" type="button" aria-label="Previous reveal or slide" title="Previous (Left Arrow)">Previous</button>
-      <span id="position" aria-live="polite" aria-atomic="true">1 / 4</span>
+      <span id="position" aria-live="polite" aria-atomic="true">1 / 5</span>
       <button id="next" type="button" aria-label="Next reveal or slide" title="Next (Right Arrow or Space)">Next</button>
     </nav>
   </body>

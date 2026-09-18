@@ -43,25 +43,17 @@ h3 { font-size: clamp(22px, 2.4vw, 34px); font-weight: 400; }
   overflow-wrap: anywhere;
 }
 
-.spectrum-body {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  grid-template-rows: 1px minmax(0, 1fr);
-  column-gap: clamp(24px, 8vw, 120px);
-  row-gap: 24px;
-}
-.spectrum-line { grid-column: 1 / -1; background: var(--muted); }
-.response { display: flex; flex-direction: column; align-items: center; gap: 24px; min-height: 0; }
-.response-left { grid-column: 1; grid-row: 2; }
-.response-right { grid-column: 2; grid-row: 2; }
-.response .screenshot { display: flex; justify-content: center; flex: 1; width: 100%; }
-.response img { align-self: flex-start; max-height: 100%; }
+.response-body { display: flex; align-items: center; justify-content: center; }
+.response { display: flex; flex-direction: column; align-items: center; gap: 28px; min-height: 0; width: min(1100px, 100%); max-height: 100%; }
+.response .screenshot { display: flex; justify-content: center; min-height: 0; width: 100%; }
+.response img { width: 100%; min-height: 0; }
 .response-messages { display: flex; flex-direction: column; gap: 24px; min-height: 0; width: 100%; }
-.response-messages .screenshot { flex: 0 1 auto; min-height: 0; }
-.response-messages img { width: 100%; max-height: 100%; }
+.response-messages .screenshot { flex: 1 1 auto; min-height: 0; }
+.response-messages img { width: 100%; min-height: 0; }
 .response.is-entering { animation: reveal 240ms ease-out; }
 @keyframes reveal { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
+.sentiment-note { margin: 24px 0 0; font-size: clamp(20px, 2.1vw, 30px); text-align: center; text-wrap: balance; }
 .chart-body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
 .pie {
   width: min(48vh, 60vw, 450px);
@@ -84,9 +76,8 @@ button:focus-visible { outline: 2px solid #f2f2f2; outline-offset: 2px; }
 #position { white-space: nowrap; font-variant-numeric: tabular-nums; }
 
 @media (max-width: 600px) {
-  .spectrum-body { column-gap: 20px; }
   .response { gap: 16px; }
-  .response h3 { font-size: clamp(18px, 4.5vw, 24px); }
+  .response h3 { font-size: 24px; }
   .missing-image { padding: 32px 8px; }
 }
 @media (max-height: 500px) {

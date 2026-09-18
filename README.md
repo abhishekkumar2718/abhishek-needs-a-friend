@@ -4,7 +4,7 @@ A tiny, dark-themed speech slide deck. Plain HTML, CSS, and JavaScript; no depen
 
 ## Screenshots
 
-The response images are `assets/embarassment.png`, `assets/glee.png`, and `assets/glee-2.png`. Both glee screenshots reveal together, stacked on the right. Add `assets/form.png` for The Form slide. Filename frames disappear automatically when the images are present. See [assets/README.md](assets/README.md).
+All four supplied screenshots are included: `assets/form.png`, `assets/embarassment.png`, `assets/glee.png`, and `assets/glee-2.png`. Both glee screenshots reveal together, stacked on the right. Filename frames appear only if an image is missing. See [assets/README.md](assets/README.md).
 
 ## Present
 

@@ -4,7 +4,7 @@ A tiny, dark-themed speech slide deck. Plain HTML, CSS, and JavaScript; no depen
 
 ## Screenshots
 
-Add `assets/form.png`, `assets/embarassment.png`, and `assets/glee.png`. The filename frames disappear automatically when the images are present. See [assets/README.md](assets/README.md).
+The response images are `assets/embarassment.png`, `assets/glee.png`, and `assets/glee-2.png`. Both glee screenshots reveal together, stacked on the right. Add `assets/form.png` for The Form slide. Filename frames disappear automatically when the images are present. See [assets/README.md](assets/README.md).
 
 ## Present
 
@@ -26,7 +26,7 @@ GitHub Pages serves the `main` branch from the repository root. Committed change
 After adding screenshots:
 
 ```sh
-git add assets/form.png assets/embarassment.png assets/glee.png
+git add assets/form.png assets/embarassment.png assets/glee.png assets/glee-2.png
 git commit -m "Add WhatsApp screenshots"
 git push
 ```

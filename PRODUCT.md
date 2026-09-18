@@ -20,7 +20,7 @@ A four-slide joke presentation of friendship survey responses.
 
 ## Capabilities and Constraints
 
-Preserve the supplied copy as-is. Use a dark theme and minimal unobstructive styling. The spectrum slide reveals title, left response, and right response in presenter-controlled stages. User supplies three WhatsApp screenshots. The approved plan includes keyboard navigation and a pie chart with 85% negative and 15% positive results, intentionally fictional for the joke.
+Preserve the supplied copy as-is. Use a dark theme and minimal unobstructive styling. The spectrum slide reveals title, left response, and right responses in presenter-controlled stages. User supplied one embarrassment and two glee screenshots; both glee messages reveal together on the right. A separate form screenshot is still required. The approved plan includes keyboard navigation and a pie chart with 85% negative and 15% positive results, intentionally fictional for the joke.
 
 ## Brand Commitments
 

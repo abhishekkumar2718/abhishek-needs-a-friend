@@ -4,7 +4,7 @@ A tiny, dark-themed speech slide deck. Plain HTML, CSS, and JavaScript; no depen
 
 ## Screenshots
 
-All four supplied screenshots are included: `assets/form.png`, `assets/embarassment.png`, `assets/glee.png`, and `assets/glee-2.png`. Embarrassment and glee have their own slides, using large centered images. Both glee screenshots reveal together, stacked vertically. Filename frames appear only if an image is missing. See [assets/README.md](assets/README.md).
+All four supplied screenshots are included: `assets/form.png`, `assets/embarassment.png`, `assets/glee.png`, and `assets/glee-2.png`. Embarrassment and glee have their own slides, using large centered images. Both glee screenshots appear together, stacked vertically. Filename frames appear only if an image is missing. See [assets/README.md](assets/README.md).
 
 ## Present
 
@@ -15,9 +15,9 @@ Open `index.html` or the GitHub Pages URL. Use browser fullscreen for the speech
 - Home / End: first / last slide.
 - Previous / Next buttons also work on touch devices.
 
-The deck contains five slides: title, Friendship Audit, Second-hand Embarrasment response, Glee responses, and key findings. All content appears immediately; there are no reveal steps. Response screenshots are vertically centered in their available body. Both glee screenshots appear together, with the interest/roast message first. URL fragments retain the current slide on refresh; old reveal fragments remain compatible.
+The deck contains seven slides: title, Friendship Survey, Acquisition Funnel, Embarrassment response, Glee responses, Feedback Sentiment, and Net Promoter Score. The funnel uses percentages rather than disclosing the sample size. The embarrassment title appears first; the next advance reveals its screenshot and caption. All other slide content appears immediately. Response screenshots are vertically centered in their available body. Both glee screenshots appear together, with the interest/roast message first. URL fragments retain the current slide and reveal step on refresh.
 
-Key findings uses two columns: sentiment text, pie, and category-only legend on the left; the user-supplied "1 in 5 respondents recommend Abhishek as a friend" stat on the right.
+Feedback Sentiment centers the pie and category-only legend. Net Promoter Score centers the user-supplied "1 in 5 respondents recommend Abhishek as a friend" stat.
 
 The 85% / 15% chart is fictional data for the joke, not an analysis of actual survey responses.
 

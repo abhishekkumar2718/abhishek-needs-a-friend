@@ -5,6 +5,7 @@ colors:
   stage: "#141414"
   text: "#f2f2f2"
   muted: "#b0b0b0"
+  neutral-flow: "#747474"
   negative: "#c76565"
   positive: "#7ea897"
   control-hover: "#fff"
@@ -66,7 +67,7 @@ Its visual language is deliberately flat and unobstructive. Screenshots remain c
 - Dark, text-led slides.
 - Uncropped evidence screenshots.
 - Flat shapes and restrained semantic color.
-- Immediate slide content and presenter-controlled navigation.
+- Presenter-controlled navigation with one intentional reveal on the embarrassment slide.
 
 ## Colors
 
@@ -104,7 +105,9 @@ The body grows into the remaining space with a fluid top gap (clamp(24px, 4vh, 4
 
 Embarrassment and glee occupy separate slides. Prominent emotion captions sit directly below their screenshot groups, rather than under the slide title. The groups are vertically centered within the remaining body, up to 1100px wide, and shrink proportionally to the body's available height using size-container units with room reserved for the caption. Glee holds two screenshots stacked vertically with a 24px gap, with the interest/roast message first.
 
-"Key findings" has two equal columns with a 48px gap. The left holds "Sentiment of form responses", the pie, and a category-only legend. The right holds the large "1 in 5" stat (up to 96px) and its recommendation sentence. Columns stack at 700px or less. The pie diameter is min(48vh, 60vw, 450px), smaller on narrow and short viewports.
+"Acquisition Funnel" follows the Friendship Survey slide. A single responsive Sankey diagram flows from a 100% source into proportional 60/20/20 outcomes. "Friends contacted" sits beneath the diagram as a centered, prominent caption. Percentage labels conceal the exact sample count while preserving the response ratios. The diagram has no closing line.
+
+"Feedback Sentiment" centers the pie and its category-only legend. "Net Promoter Score" centers the large "1 in 5" stat (up to 96px) and its recommendation sentence. The pie diameter is min(48vh, 60vw, 450px), smaller on narrow and short viewports.
 
 ## Elevation & Depth
 
@@ -126,11 +129,15 @@ Figures have no margins or decoration. Images are block-level, constrained to th
 
 ### Response visibility
 
-Each response slide shows its title, emotion, and complete screenshot group immediately. There are no staged reveals or entrance animations. Navigation advances or reverses whole slides; legacy reveal URL fragments still resolve to their slide.
+The embarrassment slide has one staged reveal: its title appears first, then the next navigation action uncovers the screenshot and "Embarrassment" caption together. The reveal uses a top-to-bottom clip with a short opacity transition, and becomes an opacity-only transition when reduced motion is requested. Reversing navigation reverses the reveal step. The glee slide remains immediate.
 
 ### Pie and legend
 
 The circular chart uses an 85% negative segment and a 15% positive segment. The legend uses square color swatches and the labels "negative" and "positive", without numbers. Its fictional values are presentation content, not reusable visual-system defaults.
+
+### Acquisition Sankey
+
+The Sankey is authored as semantic inline SVG with a title and description for assistive technology. Green represents replies, neutral gray represents the forgotten commitment, and muted red represents the unopened message. Stream widths encode the 60/20/20 split; the five-person total is not displayed.
 
 ## Do's and Don'ts
 
@@ -139,7 +146,7 @@ The circular chart uses an 85% negative segment and a 15% positive segment. The 
 - Do preserve the supplied copy exactly.
 - Do keep screenshot bodies uncropped with contain sizing.
 - Do retain quiet bottom controls and a visible keyboard-focus outline.
-- Do preserve the separate response slides, large centered images, and immediate screenshot visibility.
+- Do preserve the separate response slides, large centered images, and the single embarrassment reveal.
 
 ### Don't:
 

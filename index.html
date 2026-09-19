@@ -15,7 +15,7 @@
       </section>
 
       <section class="slide" aria-labelledby="form-title" hidden>
-        <h2 id="form-title">Friendship Audit</h2>
+        <h2 id="form-title">Friendship Survey</h2>
         <div class="slide-body form-body">
           <figure class="screenshot">
             <img src="assets/form.png" alt="WhatsApp message sharing the form">
@@ -24,15 +24,49 @@
         </div>
       </section>
 
-      <section class="slide response-slide" aria-labelledby="embarrassment-title" hidden>
+      <section class="slide" aria-labelledby="funnel-title" hidden>
+        <h2 id="funnel-title">Acquisition Funnel</h2>
+        <div class="slide-body funnel-body">
+          <figure class="sankey-chart">
+            <svg viewBox="0 0 1400 460" role="img" aria-labelledby="funnel-chart-title funnel-chart-description">
+              <title id="funnel-chart-title">Friendship survey acquisition funnel</title>
+              <desc id="funnel-chart-description">Of the friends contacted, 60 percent replied, 20 percent said absolutely and then forgot, and 20 percent did not open the messages.</desc>
+
+              <text class="sankey-label" x="0" y="265">100%</text>
+              <rect class="sankey-source" x="100" y="105" width="18" height="300"></rect>
+
+              <path class="sankey-flow sankey-flow--replied" d="M118 105 C390 105 670 40 980 40 L980 220 C670 220 390 285 118 285 Z"></path>
+              <path class="sankey-flow sankey-flow--forgot" d="M118 285 C390 285 670 255 980 255 L980 315 C670 315 390 345 118 345 Z"></path>
+              <path class="sankey-flow sankey-flow--unopened" d="M118 345 C390 345 670 380 980 380 L980 440 C670 440 390 405 118 405 Z"></path>
+
+              <rect class="sankey-target sankey-flow--replied" x="980" y="40" width="18" height="180"></rect>
+              <rect class="sankey-target sankey-flow--forgot" x="980" y="255" width="18" height="60"></rect>
+              <rect class="sankey-target sankey-flow--unopened" x="980" y="380" width="18" height="60"></rect>
+
+              <text class="sankey-label" x="1030" y="120">60% replied</text>
+              <text class="sankey-label" x="1030" y="275">
+                <tspan x="1030" dy="0">20% said “Absolutely!”</tspan>
+                <tspan x="1030" dy="40">then forgot</tspan>
+              </text>
+              <text class="sankey-label" x="1030" y="400">
+                <tspan x="1030" dy="0">20% did not open</tspan>
+                <tspan x="1030" dy="40">my messages</tspan>
+              </text>
+            </svg>
+            <figcaption class="funnel-caption">Friends contacted</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="slide response-slide has-reveal" aria-labelledby="embarrassment-title" data-reveal-steps="1" hidden>
         <h2 id="embarrassment-title">Spectrum of Emotions</h2>
         <div class="slide-body response-body">
-          <figure class="response-media">
+          <figure class="response-media" data-reveal-item>
             <figure class="screenshot">
               <img src="assets/embarassment.png" alt="WhatsApp response expressing embarrassment">
               <figcaption class="missing-image" hidden>assets/embarassment.png</figcaption>
             </figure>
-            <figcaption class="emotion-caption">Second-hand Embarrasment</figcaption>
+            <figcaption class="emotion-caption">Embarrassment</figcaption>
           </figure>
         </div>
       </section>
@@ -54,24 +88,29 @@
         </div>
       </section>
 
-      <section class="slide" aria-labelledby="findings-title" hidden>
-        <h2 id="findings-title">Key findings</h2>
-        <div class="slide-body findings-body">
+      <section class="slide" aria-labelledby="sentiment-title" hidden>
+        <h2 id="sentiment-title">Feedback Sentiment</h2>
+        <div class="slide-body centered-finding">
           <div class="chart-body">
-            <p class="sentiment-note">Sentiment of form responses</p>
             <div class="pie" role="img" aria-label="Pie chart: overwhelmingly negative sentiment, with a small positive segment"></div>
             <div class="legend">
               <p><span class="swatch negative" aria-hidden="true"></span>negative</p>
               <p><span class="swatch positive" aria-hidden="true"></span>positive</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="slide" aria-labelledby="nps-title" hidden>
+        <h2 id="nps-title">Net Promoter Score</h2>
+        <div class="slide-body centered-finding">
           <p class="hero-stat"><strong>1 in 5</strong><span>respondents recommend Abhishek as a friend.</span></p>
         </div>
       </section>
     </main>
     <nav class="controls" aria-label="Slide controls">
       <button id="previous" type="button" aria-label="Previous slide" title="Previous (Left Arrow)">Previous</button>
-      <span id="position" aria-live="polite" aria-atomic="true">1 / 5</span>
+      <span id="position" aria-live="polite" aria-atomic="true">1 / 7</span>
       <button id="next" type="button" aria-label="Next slide" title="Next (Right Arrow or Space)">Next</button>
     </nav>
   </body>

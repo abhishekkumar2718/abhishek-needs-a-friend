@@ -15,7 +15,7 @@ Open `index.html` or the GitHub Pages URL. Use browser fullscreen for the speech
 - Home / End: first / last slide.
 - Previous / Next buttons also work on touch devices.
 
-The deck contains eight slides: title, Friendship Survey, Acquisition Funnel, Embarrassment response, Glee responses, Feedback Sentiment, Key Feedback, and Net Promoter Score. The funnel uses percentages rather than disclosing the sample size. The embarrassment title appears first; the next advance reveals its screenshot and caption. All other slide content appears immediately. Response screenshots are vertically centered in their available body. Both glee screenshots appear together, with the interest/roast message first. URL fragments retain the current slide and reveal step on refresh.
+The deck contains nine slides: title, Friendship Survey, Acquisition Funnel, a title-only Spectrum of Emotions slide, Embarrassment response, Glee responses, Feedback Sentiment, Key Feedback, and Net Promoter Score. The funnel uses percentages rather than disclosing the sample size. Every advance moves to a complete slide; there are no reveal steps. Response screenshots are vertically centered in their available body. Both glee screenshots appear together, with the interest/roast message first. URL fragments retain the current slide on refresh; legacy reveal fragments resolve to their slide.
 
 Feedback Sentiment centers the pie and category-only legend. Key Feedback uses conventional left-aligned bullet lists: "Friendship", "Reading the room", and "Sense of humor" on the left; "Available" under Strengths on the right. Net Promoter Score centers the user-supplied "1 in 5 respondents recommend Abhishek as a friend" stat.
 

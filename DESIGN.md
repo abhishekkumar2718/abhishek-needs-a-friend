@@ -67,7 +67,7 @@ Its visual language is deliberately flat and unobstructive. Screenshots remain c
 - Dark, text-led slides.
 - Uncropped evidence screenshots.
 - Flat shapes and restrained semantic color.
-- Presenter-controlled navigation with one intentional reveal on the embarrassment slide.
+- Presenter-controlled, whole-slide navigation without reveal steps.
 
 ## Colors
 
@@ -103,7 +103,7 @@ Each slide occupies the viewport (100vh with 100dvh override), using a vertical 
 
 The body grows into the remaining space with a fluid top gap (clamp(24px, 4vh, 48px)). Form evidence is centered with a maximum image width of 760px. Images use contain sizing and are not cropped.
 
-Embarrassment and glee occupy separate slides. Prominent emotion captions sit directly below their screenshot groups, rather than under the slide title. The groups are vertically centered within the remaining body, up to 1100px wide, and shrink proportionally to the body's available height using size-container units with room reserved for the caption. Glee holds two screenshots stacked vertically with a 24px gap, with the interest/roast message first.
+A title-only "Spectrum of Emotions" slide introduces separate embarrassment and glee response slides. Prominent emotion captions sit directly below their screenshot groups, rather than under the slide title. The groups are vertically centered within the remaining body, up to 1100px wide, and shrink proportionally to the body's available height using size-container units with room reserved for the caption. Glee holds two screenshots stacked vertically with a 24px gap, with the interest/roast message first.
 
 "Acquisition Funnel" follows the Friendship Survey slide. A single responsive Sankey diagram flows from a 100% source into proportional 60/20/20 outcomes. "Friends contacted" sits beneath the diagram as a centered, prominent caption. Percentage labels conceal the exact sample count while preserving the response ratios. The diagram has no closing line.
 
@@ -129,7 +129,7 @@ Figures have no margins or decoration. Images are block-level, constrained to th
 
 ### Response visibility
 
-The embarrassment slide has one staged reveal: its title appears first, then the next navigation action uncovers the screenshot and "Embarrassment" caption together. The reveal uses a top-to-bottom clip with a short opacity transition, and becomes an opacity-only transition when reduced motion is requested. Reversing navigation reverses the reveal step. The glee slide remains immediate.
+The response sequence uses only complete slides: a title-only "Spectrum of Emotions" slide, then the fully visible embarrassment slide, then the fully visible glee slide. Navigation advances and reverses one whole slide at a time; there are no staged reveals or entrance animations.
 
 ### Pie and legend
 
@@ -146,7 +146,7 @@ The Sankey is authored as semantic inline SVG with a title and description for a
 - Do preserve the supplied copy exactly.
 - Do keep screenshot bodies uncropped with contain sizing.
 - Do retain quiet bottom controls and a visible keyboard-focus outline.
-- Do preserve the separate response slides, large centered images, and the single embarrassment reveal.
+- Do preserve the title-only emotion introduction and the separate, immediately visible response slides.
 
 ### Don't:
 

@@ -59,17 +59,6 @@ h3 { font-size: clamp(22px, 2.4vw, 34px); font-weight: 400; }
 .response-media { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 24px; width: min(1100px, 100%); }
 .response-media .screenshot { width: 100%; }
 .response-media img { width: 100%; height: auto; }
-.js .has-reveal .response-media {
-  transition: clip-path 650ms cubic-bezier(0.16, 1, 0.3, 1), opacity 360ms ease-out;
-}
-.js .has-reveal:not(.is-revealed) .response-media {
-  clip-path: inset(0 0 100% 0);
-  opacity: 0;
-}
-.js .has-reveal.is-revealed .response-media {
-  clip-path: inset(0);
-  opacity: 1;
-}
 /* Fit the complete image group inside the available body, centered as one unit. */
 @supports (width: 1cqh) {
   .response-media { width: min(1100px, 100%, calc((100cqh - 120px) * 7.5)); }
@@ -117,12 +106,6 @@ button:focus-visible { outline: 2px solid #f2f2f2; outline-offset: 2px; }
   .review-column { min-height: 0; padding: 32px 8px; }
   .review-column + .review-column { border-left: 0; border-top: 1px solid #444; }
   .missing-image { padding: 32px 8px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .js .has-reveal .response-media {
-    clip-path: none;
-    transition: opacity 150ms linear;
-  }
 }
 @media (max-height: 500px) {
   .slide { padding-top: 20px; }

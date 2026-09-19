@@ -109,7 +109,7 @@ A title-only "Spectrum of Emotions" slide introduces separate embarrassment and 
 
 "Feedback Sentiment" centers the pie and its category-only legend. "Key Feedback" uses two equal columns separated by a 1px rule. Modest section headings sit above conventional left-aligned lists: the single recurring improvement theme "Reading the room" on the left and "Available" under Strengths on the right. The columns stack in the same order with a horizontal rule on narrow screens. "Net Promoter Score" centers the large "1 in 5" stat (up to 96px) and its recommendation sentence. The pie diameter is min(48vh, 60vw, 450px), smaller on narrow and short viewports.
 
-The final "Thanks" slide uses the same centered title-slide composition as the opening and emotion-section divider, with no supporting content.
+The final "Conclusion" slide uses the same centered title-slide composition as the opening and emotion-section divider. Its single subtitle sits directly beneath the title in restrained, balanced body text.
 
 ## Elevation & Depth
 
